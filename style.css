@@ -159,6 +159,22 @@ footer a {
     text-decoration: none;
 }
 
+#loading {
+    position: absolute;
+    z-index: 9999;
+    height: 100vh;
+    width: 100%;
+    background-color: #393e46;
+}
+
+#loading h1 {
+    color: #eeeeee;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @media only screen and (max-width: 600px) {
     #container h1 {
         font-size: 2.3em;
