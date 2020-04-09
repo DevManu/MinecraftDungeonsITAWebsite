@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
+    <title>Minecraft Dungeons ITA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div id="info">
+        <button id="info-close-button" onclick="info(false)">Chiudi</button>
+        <h1>Chi siamo?</h1>
+        <hr>
+        <p>La community è stata creata da <span class="creator">Raffq<span class="creator-contact one">Raffq
+        #9942</span></span> e <span class="creator">_Ma_nu_<span class="creator-contact two">_Ma_nu_
+          #9585</span></span>
+            Questa è una community <span class="unofficial">non ufficiale</span> che vuole riunire gli interessati a
+            <a href="https://www.minecraft.net/it-it/about-dungeons/">Minecraft Dungeons</a>. Non siamo affiliati con Mojang o Microsoft.
+    </div>
+
+
+    <div id="img"></div>
+    <div id="container">
+        <h1>Minecraft Dungeons ITA</h1>
+        <p>La nostra community vuole riunire tutti i giocatori interessati a Minecraft Dungeons, per condividere esperienze e conoscenze.</p>
+        <a href="https://discord.gg/eWBJDXk">Entra</a>
+    </div>
+    <footer>Minecraft Dungeons ITA è una community non ufficiale. Non siamo associati in alcun modo con Mojang. <a href="javascript:info(true)">Info</a></footer>
+
+    <script>
+        function info(o) {
+
+            let element = document.getElementById("info");
+
+            if (!o) {
+                opened = false;
+                element.style.display = "none";
+            } else {
+                opened = true;
+                element.style.display = "block";
+            }
+        }
+
+
+        window.addEventListener('click', function(e) {
+            if (!document.getElementById('info').contains(e.target)) {
+                info(false);
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                info(false);
+            }
+        });
+    </script>
+
+
+</body>
+
+
+
+
+</html>
