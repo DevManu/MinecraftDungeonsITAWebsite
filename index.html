@@ -1,77 +1,112 @@
-<!DOCTYPE html>
-<html lang="it">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
-    <title>Minecraft Dungeons ITA</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <div id="loading">
-        <h1>Caricamento...</h1>
-    </div>
-
-
-    <div id="info">
-        <button id="info-close-button" onclick="info(false)">Chiudi</button>
-        <h1>Chi siamo?</h1>
-        <hr>
-        <p>La community è stata creata da <span class="creator">Raffq<span class="creator-contact one">Raffq
-        #9942</span></span> e <span class="creator">_Ma_nu_<span class="creator-contact two">_Ma_nu_
-          #9585</span></span>
-            Questa è una community <span class="unofficial">non ufficiale</span> che vuole riunire gli interessati a
-            <a href="https://www.minecraft.net/it-it/about-dungeons/">Minecraft Dungeons</a>. Non siamo affiliati con Mojang o Microsoft.
-    </div>
-
-
-    <div id="img"></div>
-    <div id="container">
-        <h1>Minecraft Dungeons ITA</h1>
-        <p>La nostra community vuole riunire tutti i giocatori interessati a Minecraft Dungeons, per condividere esperienze e conoscenze.</p>
-        <a href="https://discord.gg/eWBJDXk">Entra</a>
-    </div>
-    <footer>Minecraft Dungeons ITA è una community non ufficiale. <a href="javascript:info(true)">Info</a></footer>
-
-    <script>
-        function info(o) {
-
-            let element = document.getElementById("info");
-
-            if (!o) {
-                opened = false;
-                element.style.display = "none";
-            } else {
-                opened = true;
-                element.style.display = "block";
-            }
-        }
-
-
-        window.addEventListener('click', function(e) {
-            if (!document.getElementById('info').contains(e.target)) {
-                info(false);
-            }
-        });
-
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                info(false);
-            }
-        });
-
-        window.onload = function() {
-            document.getElementById("loading").style.display = "none";
-        };
-    </script>
-
-
-</body>
-
-
-
-
+<html>
+   <head>
+      <title>Minecraft Dungeons ITA</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+      <meta name ="keywords" content="parola chiave 1, parola chiave 2, parola chiave 3"/>
+      <meta name="author" content="_Ma_nu_" />
+      <meta name="robots" content="index"/>
+      <meta charset="utf-8"/>
+      <meta name ="description" content="Minecraft Dungeons ITA è una community italiana dedicata a Minecraft Dungeons. Entra nel nostro server Discord."/>
+   </head>
+   <body>
+      <!-- Navbar -->
+      <header>
+         <ul id="nav">
+            <li>Minecraft Dungeons ITA</li>
+            <li class="discord discord-link"><a href="https://discord.gg/eWBJDXk">Entra</a></li>
+         </ul>
+      </header>
+      <!-- waypoints -->
+      <div id="paragraphs">
+         <div id="waypoints">
+            <div id="waypoints-content">
+               <h1 class="waypointTitle">Community</h1>
+               <h1 class="waypointTitle">Novità</h1>
+               <h1 class="waypointTitle">Guide</h1>
+               <h1 class="waypointTitle">Voce</h1>
+            </div>
+         </div>
+         <div id="paragraphs-text">
+            <div class="paragraph">
+               <h1>Community</h1>
+               <p>Minecraft Dungeons ITA è una community italiana non ufficiale dedicata a <a href="https://www.minecraft.net/en-us/about-dungeons/">Minecraft Dungeons</a>. Abbiamo organizzato il nostro server Discord in maniera ordinata e intuitiva, per permettere a chiunque di condividere esperienze e trovare informazioni sul gioco. </p>
+            </div>
+            <div class="paragraph">
+               <h1>Novità</h1>
+               <p>All'interno del <a href="https://discord.gg/eWBJDXk">server Discord</a> puoi trovare informazioni utili sull'evoluzione di Minecraft Dungeons. Puoi discutere e chiedere chiarimenti al resto della community, così da poter proseguire al meglio nella tua avventura.</p>
+            </div>
+            <div class="paragraph">
+               <h1>Guide</h1>
+               <p>I nostri giocatori più preparati possono richiedere un canale personale in cui scrivere guide e suggerimenti. Qualsiasi utente può leggere le guide e imparare nuovi modi di approcciarsi al gioco. </p>
+            </div>
+            <div class="paragraph">
+               <h1>Canali vocali</h1>
+               <p>Con le chat vocali del <a href="http://discord.io/minecraftdungeonsita">server Discord di Minecraft Dungeons ITA</a> puoi comunicare con gli altri giocatori e divertirti ancora di più. Il nostro BOT privato, realizzato da noi e studiato appositamente per la nostra community, ti permette inoltre di creare stanze private in cui riunirti con i tuoi amici</p>
+            </div>
+         </div>
+      </div>
+      <div id="join">
+         <h1><a href="https://discord.gg/eWBJDXk" class="discord-link">Entra nella nostra community</a></h1>
+         <div></div>
+      </div>
+      <footer>Minecraft Dungeons ITA - 2020 <span>Sito creato da _Ma_nu_</span></footer>
+      <script src="noframework.waypoints.min.js"></script>
+      <script>
+         var continuousElements = document.getElementsByClassName('paragraph')
+         for (let i = 0; i < continuousElements.length; i++) {
+           new Waypoint({
+             element: continuousElements[i],
+             handler: function() {
+               changeColor(i);
+             }
+           })
+         }
+                     
+                     
+              
+           
+                     
+             
+                     var elList = document.getElementsByClassName("waypointTitle");;
+                     function changeColor(i) {
+                         elList[i].classList.add("activeElement");
+                         
+                         for (let n = 0; n < elList.length; n++) {
+                             if (n != i) {
+                                 elList[n].classList.remove("activeElement");
+                             }
+                                 
+                         }
+                     }
+                     
+                     
+         var socialFloat = document.querySelector('#waypoints-content');
+         var footer = document.querySelector('#join');
+         
+         function checkOffset() {
+           function getRectTop(el){
+             var rect = el.getBoundingClientRect();
+             return rect.top;
+           }
+           
+           if((getRectTop(socialFloat) + document.body.scrollTop) + socialFloat.offsetHeight >= (getRectTop(footer) + document.body.scrollTop)) {
+             socialFloat.style.position = 'absolute';
+                 socialFloat.style.bottom = "0";
+           }
+           if(document.body.scrollTop + window.innerHeight < (getRectTop(footer) + document.body.scrollTop)) {
+             socialFloat.style.position = 'fixed'; // restore when you scroll up
+             socialFloat.style.bottom = "" // restore when you scroll up
+         
+           }
+           }
+         
+         document.addEventListener("scroll", function(){
+           checkOffset();
+         });
+         
+                       
+                     
+      </script>
+   </body>
 </html>
