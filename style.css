@@ -1,198 +1,161 @@
 * {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', Verdana;
 }
 
-*:focus {
-    outline: none;
-}
 
 body {
-    /*background-image: linear-gradient(#212121, #323232);*/
-    height: 100vh;
-    font-family: "Roboto";
-    overflow: hidden;
+	background-color: #212121;
+	color: #fff;
 }
 
-#img {
-    height: 100vh;
-    background-image: url("img2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: brightness(40%);
-    -webkit-box-shadow: inset 0px 0px 101px 40px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: inset 0px 0px 101px 40px rgba(0, 0, 0, 0.75);
-    box-shadow: inset 0px 0px 101px 40px rgba(0, 0, 0, 0.75);
+#nav {
+	background-color: #000;
+	color: #fff;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
 }
 
-#container {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    color: #14ffec;
-    text-align: center;
-    width: 70%;
+#nav li {
+	list-style-type: none;
+	font-size: 2em;
+	padding: 10px;
+	display: inline-block;
 }
 
-#container h1 {
-    font-size: 3em;
-    font-weight: 700;
-    margin-bottom: 0.3em;
-    letter-spacing: 5px;
+#nav a {
+	color: #fff;
+	text-decoration: none;
 }
 
-#container p {
-    font-size: 1.7em;
-    font-weight: 300;
+.discord {
+	text-align: center;
+	float: right;
+	width: 5em;
 }
 
-#container a {
-    display: block;
-    margin: 30px auto 0;
-    padding: 20px 50px;
-    width: 20%;
-    font-size: 2.3em;
-    text-decoration: none;
-    background-color: #0d7377;
-    color: #fff;
-    font-weight: bold;
+.discord-link {
+	background-image: linear-gradient(to right, #8a15cf, #b615cf);
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
 }
 
-#container a:hover {
-    box-shadow: 5px 10px;
-    -webkit-box-shadow: 0px 0px 72px -2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 72px -2px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 72px -2px rgba(0, 0, 0, 0.75);
+#paragraphs {
+	display: flex;
+	justify-content: space-around;
+	font-size: 1.4em;
+	padding-top: 120px;
 }
 
-#info {
-    display: none;
-    position: absolute;
-    z-index: 999;
-    padding: 50px;
-    background-color: #1f4287;
-    height: 40%;
-    width: 40%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #4ecca3;
-    -webkit-box-shadow: inset 0px 0px 35px -17px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: inset 0px 0px 35px -17px rgba(0, 0, 0, 0.75);
-    box-shadow: inset 0px 0px 35px -17px rgba(0, 0, 0, 0.75);
-    border-radius: 5px;
-    overflow: auto;
+#waypoints {
+	flex: 0 0 80px;
+	position: relative;
 }
 
-.creator:hover .creator-contact {
-    display: inline-block;
+#waypoints-content {
+	position: fixed;
+	width: 80px;
+	transition: all 3s;
 }
 
-.creator {
-    position: relative;
-    font-weight: bold;
+#paragraphs-text {
+	flex-basis: 70%;
 }
 
-.creator .creator-contact {
-    display: none;
-    width: 160px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    bottom: 100%;
-    margin-left: -80px;
-    font-size: 1em;
+.paragraph {
+	padding: 200px 0;
 }
 
-#info a {
-    color: #4ecca3;
+.paragraph:last-child {
+	padding-bottom: 0;
 }
 
-#info p {
-    margin-top: 30px;
-    font-size: 1.3em;
-    line-height: 1.2em;
+.paragraph p {
+	font-size: 1.2em;
 }
 
-#info hr {
-    border-top: 0.5px solid #4ecca3;
+.paragraph:not(:first-child) {
+	margin: 100px 0;
 }
 
-#info h1 {
-    font-size: 2.3em;
-    text-align: center;
-    margin-bottom: 30px;
+.paragraph:last-child {
+	margin-bottom: 0;
 }
 
-#info-close-button {
-    position: absolute;
-    right: 5%;
-    top: 5%;
-    padding: 10px;
-    border: none;
-    background-color: #1f4287;
-    color: #4ecca3;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: 3px solid #4ecca3;
+.waypointtitle {
+	font-size: 30px;
+	font-weight: normal;
+}
+
+.activeElement {
+	font-weight: bold;
+}
+
+#join {
+	padding-top: 200px;
+	padding-bottom: 100px;
+	text-align: center;
+}
+
+#join a {
+	padding: 15px 20px;
+}
+
+#paragraphs a {
+	color: #fff;
+	text-decoration: underline;
+	transition: color .7s;
+}
+
+#paragraphs a:hover {
+	color: #d1d1d1;
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    background-color: #393e46;
-    color: #eeeeee;
-    width: 100%;
-    padding: 3px 0;
+	background-color: #000;
+	color: #a8a8a8;
+	text-align: center;
+	position: relative;
+	height: 30px;
+	line-height: 30px;
 }
 
-footer a {
-    color: #eeeeee;
-    font-weight: bold;
-    text-decoration: none;
+footer span {
+	float: right;
+	position: absolute;
+	right: 30px;
 }
 
-#loading {
-    position: absolute;
-    z-index: 9999;
-    height: 100vh;
-    width: 100%;
-    background-color: #393e46;
+@media only screen and (max-width: 880px) {
+	#nav li {
+		font-size: 1.5em;
+	}
+	#paragraphs div:first-child {
+		display: none;
+	}
+	.paragraph {
+		padding: 0 40px;
+		margin: 0;
+	}
+	#paragraphs {
+		display: block;
+	}
 }
 
-#loading h1 {
-    color: #eeeeee;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-@media only screen and (max-width: 600px) {
-    #info {
-        width: 70%;
-        height: 70%;
-    }
-    #info p {
-        font-size: 1.2em;
-    }
-    #container h1 {
-        font-size: 2.3em;
-        letter-spacing: normal;
-    }
-    #container p {
-        font-size: 1.4em;
-    }
-    #container a {
-        width: 40%;
-        padding: 10px 40px;
-    }
+@media only screen and (max-width: 700px) {
+	#join a {
+		font-size: 0.6em;
+	}
+	footer {
+		text-align: left;
+		padding: 10px;
+	}
+	footer span {
+		position: static;
+		right: 10px;
+	}
 }
