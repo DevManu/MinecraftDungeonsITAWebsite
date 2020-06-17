@@ -150,11 +150,12 @@ footer span {
 		font-size: 0.6em;
 	}
 	footer {
-		text-align: left;
+		text-align: center;
 	}
 	footer span {
 		position: static;
-		right: 10px;
+        float: none;
+        display: block;
 	}
     #nav li {
         font-size: 1.3em;
