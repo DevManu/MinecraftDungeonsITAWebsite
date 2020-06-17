@@ -158,4 +158,7 @@ footer span {
 		position: static;
 		right: 10px;
 	}
+        #nav li {
+        font-size: 1.5em;
+        }
 }
