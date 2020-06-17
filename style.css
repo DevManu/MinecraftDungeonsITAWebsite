@@ -133,7 +133,7 @@ footer span {
 	#nav li {
 		font-size: 1.5em;
 	}
-	#paragraphs div:first-child {
+	#waypoints {
 		display: none;
 	}
 	.paragraph {
