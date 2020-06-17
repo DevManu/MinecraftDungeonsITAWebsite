@@ -120,8 +120,7 @@ footer {
 	color: #a8a8a8;
 	text-align: center;
 	position: relative;
-	height: 30px;
-	line-height: 30px;
+	padding: 10px;
 }
 
 footer span {
@@ -152,13 +151,12 @@ footer span {
 	}
 	footer {
 		text-align: left;
-		padding: 10px;
 	}
 	footer span {
 		position: static;
 		right: 10px;
 	}
-        #nav li {
+    #nav li {
         font-size: 1.3em;
-        }
+    }
 }
